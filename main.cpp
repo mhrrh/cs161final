@@ -1,7 +1,7 @@
 // ------------- FILE HEADER -------------
-// Author ✅: 
-// Assignment ✅:
-// Date ✅:
+// Author ✅: Madison Harrah
+// Assignment ✅: Final Exam
+// Date ✅: 06/11/26
 // Citations: 
 
 // ------------- CODE -------------
@@ -9,6 +9,42 @@
 
 using namespace std;
 
+void welcome();
+void goodbye();
+void getInput(int &goal);
+int calcTotal();
+
+int main ();{
+  int goal = 0;
+  int totalMiles = 0;
+  int difference = 0;
+
+  welcome();
+  getInput(goal);
+
+  if (goal <= 0){
+  cout << endl;
+  cout << "No miles were tracked this week." << endl;
+  } else {
+    totalMiles = calcTotal();
+    cout << endl;
+    cout << "You rode " << totalMiles << "miles this week." << endl;
+    if (totalMiles = goal){
+      difference = totalMiles - goal;
+      cout << "Great job! You exceeded your goal by " << difference << "miles!" << endl;
+    } else if (totalMiles < goal){
+      difference = goal - totalMiles;
+      cout << "Uh oh! You missed your goal by " << difference << "miles!" << endl;
+    } else {
+      cout << "Good job! You met your goal!" << endl;
+    }
+  }
+  goodbye ();
+  return 0;
+}
+void welcome (){
+  
+}
 
 
 // Have fun with messages
