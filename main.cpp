@@ -129,33 +129,6 @@ void getInput(int &goal);
 // (See sample run tests below).
 // After all of the days have been entered, 
 // calculate and return the total miles for the week 
-int calcTotal();
-
-int main() {
-  welcome();
-  cout << "TODO: Implement main function" << endl;
-  goodbye();
-  return 0;
-}
-
-// Function implementations (if any)
-void getInput(int &goal) {
-  cout << "TODO: Implement getInput function" << endl;
-}
-
-int calcTotal() {
-  cout << "TODO: Implement calcTotal function" << endl;
-  return 0;
-}
-
-void welcome() {
-  cout << "TODO: Implement welcome function" << endl;
-}
-
-void goodbye() {
-  cout << GOOBYE_MESSAGE << endl;
-  cout << "TODO: Implement goodbye function" << endl;
-}
 
 
 // ------------- DESIGN -------------
