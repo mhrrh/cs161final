@@ -14,7 +14,7 @@ void goodbye();
 void getInput(int &goal);
 int calcTotal();
 
-int main ();{
+int main (){
   int goal = 0;
   int totalMiles = 0;
   int difference = 0;
