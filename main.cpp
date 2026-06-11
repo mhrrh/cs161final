@@ -43,7 +43,47 @@ int main ();{
   return 0;
 }
 void welcome (){
+  cout << "Welcome to my Miles Tracker program!" << endl;
+  cout << endl;
+}
+void goodbye (){
+  cout << endl;
+  cout << "Keep riding!" << endl;
+}
+void getInput(int &goal){
+  cout << "How many miles do you want to ride this week?";
+  cin >> goal;
+}
+int calcTotal(){
+  int miles = 0;
+  int totalMiles = 0;
+
+  for (int day = 1; day <= 7; day++){
+    if (day == 1){
+      cout << "How many miles did you ride on Sunday?";
+    } else if (day == 2){
+      cout << "How many miles did you ride on Monday?";
+    } else if (day == 3){
+      cout << "How many miles did you ride on Tuesday?";
+    } else if (day == 4){
+      cout << "How many miles did you ride on Wednesday?";
+    } else if (day == 5){
+      cout << "How many miles did you ride on Thursday?";
+    } else if (day == 6){
+      cout << "How many miles did you ride on Friday?";
+    } else {
+      cout << "How many miles did you ride on Saturday?";
+    }
+    cin >> miles;
+    if (miles < 0){
+      cout << "Miles must be 0 or greater!" << endl;
+      day = day - 1;
+    } else {
+      totalMiles = totalMiles + miles;
+    }
+  }
   
+return totalMiles;
 }
 
 
