@@ -17,7 +17,6 @@ int calcTotal();
 int main (){
   int goal = 0;
   int totalMiles = 0;
-  int difference = 0;
 
   welcome();
   getInput(goal);
@@ -28,15 +27,13 @@ int main (){
   } else {
     totalMiles = calcTotal();
     cout << endl;
-    cout << "You rode " << totalMiles << "miles this week." << endl;
-    if (totalMiles = goal){
-      difference = totalMiles - goal;
-      cout << "Great job! You exceeded your goal by " << difference << "miles!" << endl;
-    } else if (totalMiles < goal){
-      difference = goal - totalMiles;
-      cout << "Uh oh! You missed your goal by " << difference << "miles!" << endl;
+    cout << "You rode " << totalMiles << " miles this week." << endl;
+    if (totalMiles == goal){
+      cout << "Great job! You met your goal!" << endl;
+    } else if (totalMiles > goal){
+      cout << "Great job! You exceeded your goal by " << totalMiles - goal << " miles!" << endl;
     } else {
-      cout << "Good job! You met your goal!" << endl;
+      cout << "Uh oh! You missed your goal by " << goal - totalMiles << " miles!" << endl;
     }
   }
   goodbye ();
@@ -51,7 +48,7 @@ void goodbye (){
   cout << "Keep riding!" << endl;
 }
 void getInput(int &goal){
-  cout << "How many miles do you want to ride this week?";
+  cout << "How many miles do you want to ride this week? ";
   cin >> goal;
 }
 int calcTotal(){
@@ -60,19 +57,19 @@ int calcTotal(){
 
   for (int day = 1; day <= 7; day++){
     if (day == 1){
-      cout << "How many miles did you ride on Sunday?";
+      cout << "How many miles did you ride on Sunday? ";
     } else if (day == 2){
-      cout << "How many miles did you ride on Monday?";
+      cout << "How many miles did you ride on Monday? ";
     } else if (day == 3){
-      cout << "How many miles did you ride on Tuesday?";
+      cout << "How many miles did you ride on Tuesday? ";
     } else if (day == 4){
-      cout << "How many miles did you ride on Wednesday?";
+      cout << "How many miles did you ride on Wednesday? ";
     } else if (day == 5){
-      cout << "How many miles did you ride on Thursday?";
+      cout << "How many miles did you ride on Thursday? ";
     } else if (day == 6){
-      cout << "How many miles did you ride on Friday?";
+      cout << "How many miles did you ride on Friday? ";
     } else {
-      cout << "How many miles did you ride on Saturday?";
+      cout << "How many miles did you ride on Saturday? ";
     }
     cin >> miles;
     if (miles < 0){
