@@ -74,8 +74,9 @@ int calcTotal(){
     cin >> miles;
     if (miles < 0){
       cout << "Miles must be 0 or greater!" << endl;
-      day = day - 1;
-    } else {
+      day--;
+    }
+    else {
       totalMiles = totalMiles + miles;
     }
   }
