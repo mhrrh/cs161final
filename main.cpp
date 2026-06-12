@@ -55,7 +55,7 @@ int calcTotal(){
   int miles = 0;
   int totalMiles = 0;
 
-  for (int day = 1; day <= 7; day++){
+  for (int day = 1; day <= 7; day = day + 1){
     if (day == 1){
       cout << "How many miles did you ride on Sunday? ";
     } else if (day == 2){
@@ -74,7 +74,7 @@ int calcTotal(){
     cin >> miles;
     if (miles < 0){
       cout << "Miles must be 0 or greater!" << endl;
-      day--;
+      day = day - 1;
     }
     else {
       totalMiles = totalMiles + miles;
